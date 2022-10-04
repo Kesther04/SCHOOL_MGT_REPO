@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0px;
+    background-size:0%;
+    background-color:white;
+}
+
+.front-card{
+    width:40%;
+    height:250px;
+    background:linear-gradient(to bottom,rgb(200,200,200),rgb(0,0,100));
+    margin:20px;
+    float:left;
+    padding:5px;
+    color:white;
+    font-weight: bold;
+}
+
+.back-card{
+    width:40%;
+    height:250px;
+    background:whitesmoke;
+    margin:20px;
+    float:left;
+}
+
+
+.inner-b-card{
+    float:left;
+    width:100%;
+    text-align: center;
+    background:grey;
+}
+
+.inner-b-card img{
+    margin-top: 5px;
+}
+
+.innner-b-card h1{
+    text-align: center;
+}
+
+.next-inner-b-card{
+    float:left;
+    padding:5px;
+    width:100%;
+    font-size: 14px;
+}
