@@ -32,17 +32,20 @@ SESSION_YEAR varchar(120)not null,
 TERM varchar(120)not null,
 SUBJECT varchar(120)not null,
 SUBJECT_NO varchar(10)not null,
+FIRST_ASS varchar(120)not null,
+SEC_ASS varchar(120)not null,
+THIRD_ASS varchar(120)not null,
 TOTAL_ASSESSMENT_SCORE varchar(120)not null,
 EXAM_SCORE varchar(120)not null,
+SUBJECT_TOTAL_SCORE varchar(120)not null,
+SUBJECT_GRADE varchar(120)not null,
+SUBJECT_REMARK varchar(120)not null,
 GENERAL_TOTAL_SCORE varchar(120)not null,
-GRADE varchar(120)not null,
-REMARK varchar(120)not null,
-OVERALL_TOTAL_SCORE varchar(120)not null,
-TOTAL_SUBJECT_NO varchar(120)not null,
-OVERALL_AVERAGE varchar(120)not null,
-OVERALL_REMARK varchar(120)not null,
+AVERAGE varchar(120)not null,
 POSITION varchar(120)not null,
-MAIN_GRADE varchar(120)not null)ENGINE=innoDB");
+GRADE varchar(120)not null,
+TOTAL_SUBJECT_NO varchar(120)not null,
+REMARK varchar(120)not null)ENGINE=innoDB");
 
 if ($tab) {
     echo "table successful";
@@ -50,6 +53,25 @@ if ($tab) {
     echo "no table unsuccessful";
 }
 
+
+$tottab = $con->query("CREATE TABLE if not exists totality
+(ID int(120)not null primary key auto_increment,
+FULLNAME varchar(120)not null,
+CLASS varchar(120)not null,
+REG_NO varchar(120)not null,
+SESSION_YEAR varchar(120)not null,
+TERM varchar(120)not null,
+GENERAL_TOTAL_SCORE varchar(120)not null,
+AVERAGE varchar(120)not null,
+POSITION varchar(120)not null,
+GRADE varchar(120)not null,
+TOTAL_SUBJECT_NO varchar(120)not null,
+REMARK varchar(120)not null)ENGINE=innoDB");
+if ($tottab) {
+    print("<p>tottable created</p>");
+}else {
+    print("<p>tottable not created</p>");
+}
 
 $pt = $con->query("CREATE TABLE if not exists pin_table
 (ID int(80)not null primary key auto_increment,
@@ -77,4 +99,11 @@ if ($tabl) {
 }else {
     print("pin result table not created");
 }
+
+
+$postab = $con->query("CREATE TABLE if not exists position
+(ID int(80)not null primary key auto_increment,
+AVERAGE varchar(120)not null,
+REG_NO varchar(120)not null,
+POSITION varchar(120)not null)ENGINE=innoDB");
 ?>

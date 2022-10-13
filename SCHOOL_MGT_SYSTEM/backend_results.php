@@ -1,5 +1,4 @@
 <?php 
-session_start(); 
 if ($_SERVER['REQUEST_METHOD']=="POST") {
 
     $sname = $_POST['sname'];
@@ -59,15 +58,55 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     }
     elseif ($sel->num_rows > 0 AND $pin==$dpot AND $regi==$reg AND $seso==$sess AND $teri!==$term AND $clad==$class) {
         //to check if the term is incorrect
-        header("location:check_result.php?msg=incorrect term");
+        header("location:check_result.php?msg=the pin has been used with another term");
     }
     elseif ($sel->num_rows > 0 AND $pin==$dpot AND $regi==$reg AND $seso==$sess AND $teri==$term AND $clad!==$class) {
         //to check if the class is incorrect
-        header("location:check_result.php?msg=incorrect class");
+        header("location:check_result.php?msg=the pin has been used with another class");
+    }
+    elseif ($sel->num_rows > 0 AND $pin==$dpot AND $regi==$reg AND $seso==$sess AND $teri!==$term AND $clad!==$class) {
+        //to check if the class and term is incorrect
+        header("location:check_result.php?msg=the pin has been used with another term and class");
+    }
+    elseif ($sel->num_rows > 0 AND $pin==$dpot AND $regi!==$reg AND $seso==$sess AND $teri==$term AND $clad!==$class) {
+        //to check if the class and reg no is incorrect
+        header("location:check_result.php?msg=the pin has been used with another registration number and class");
+    }
+    elseif ($sel->num_rows > 0 AND $pin==$dpot AND $regi!==$reg AND $seso==$sess AND $teri!==$term AND $clad==$class) {
+        //to check if the term and reg no is incorrect
+        header("location:check_result.php?msg=the pin has been used with another term and registration number");
+    }
+    elseif ($sel->num_rows > 0 AND $pin==$dpot AND $regi!==$reg AND $seso==$sess AND $teri!==$term AND $clad!==$class) {
+        //to check if the class, term and reg no is incorrect
+        header("location:check_result.php?msg=the pin has been used with other credentials");
+    }
+    elseif ($sel->num_rows > 0 AND $pin==$dpot AND $regi==$reg AND $seso!==$sess AND $teri!==$term AND $clad!==$class) {
+        //to check if the class, term and session is incorrect
+        header("location:check_result.php?msg=the pin has been used with other credentials");
+    }
+    elseif ($sel->num_rows > 0 AND $pin==$dpot AND $regi!==$reg AND $seso!==$sess AND $teri==$term AND $clad!==$class) {
+        //to check if the class, session and reg no is incorrect
+        header("location:check_result.php?msg=the pin has been used with other credentials");
+    }
+    elseif ($sel->num_rows > 0 AND $pin==$dpot AND $regi!==$reg AND $seso!==$sess AND $teri!==$term AND $clad==$class) {
+        //to check if the session, term and reg no is incorrect
+        header("location:check_result.php?msg=the pin has been used with other credentials");
     }
     elseif ($sel->num_rows > 0 AND $pin==$dpot AND $regi==$reg AND $seso!==$sess AND $teri==$term AND $clad==$class) {
         //to check if the session is incorrect
-        header("location:check_result.php?msg=incorrect session");
+        header("location:check_result.php?msg=the pin has been used with another session");
+    }
+    elseif ($sel->num_rows > 0 AND $pin==$dpot AND $regi==$reg AND $seso!==$sess AND $teri==$term AND $clad!==$class) {
+        //to check if the session and class is incorrect
+        header("location:check_result.php?msg=the pin has been used with another session and class");
+    }
+    elseif ($sel->num_rows > 0 AND $pin==$dpot AND $regi==$reg AND $seso!==$sess AND $teri!==$term AND $clad==$class) {
+        //to check if the session and term is incorrect
+        header("location:check_result.php?msg=the pin has been used with another session and term");
+    }
+    elseif ($sel->num_rows > 0 AND $pin==$dpot AND $regi!==$reg AND $seso!==$sess AND $teri==$term AND $clad==$class) {
+        //to check if the session and reg no  is incorrect
+        header("location:check_result.php?msg=the pin has been used with another session and registration number");
     }
     elseif ($sel->num_rows > 0 AND $pin==$dpot  AND $regi!==$reg AND $seso==$sess AND $teri==$term AND $clad==$class) {
         //to check if the registration number is incorrect

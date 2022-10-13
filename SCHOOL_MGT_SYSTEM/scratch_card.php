@@ -14,7 +14,7 @@
 <body>
     <?php  require("admin_dashboard_layout.php");  ?>
 
-    <section class="main-div-container" >
+    <section class="main-div-container"  >
 
         <?php 
         require("school_database_connection.php");

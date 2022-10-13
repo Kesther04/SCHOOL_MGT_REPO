@@ -34,17 +34,18 @@ if ($_SERVER['REQUEST_METHOD']="POST") {
     }
 
     $insert = $con->query("INSERT INTO student_result
-    (FULLNAME,CLASS,REG_NO,SESSION_YEAR,TERM,SUBJECT,SUBJECT_NO,TOTAL_ASSESSMENT_SCORE,EXAM_SCORE,GENERAL_TOTAL_SCORE,GRADE,REMARK,OVERALL_TOTAL_SCORE,TOTAL_SUBJECT_NO,OVERALL_AVERAGE,OVERALL_REMARK,POSITION,MAIN_GRADE)VALUE('$full','$class','$reg','$sess','$term','$sub','1','$tas','$exam','$gts','$gd','$rm','$ots','$subno',round('$avr',2),'$mrk','','$mg')");
+    (FULLNAME,CLASS,REG_NO,SESSION_YEAR,TERM,SUBJECT,SUBJECT_NO,FIRST_ASS,SEC_ASS,THIRD_ASS,TOTAL_ASSESSMENT_SCORE,EXAM_SCORE,SUBJECT_TOTAL_SCORE,SUBJECT_GRADE,SUBJECT_REMARK,GENERAL_TOTAL_SCORE,AVERAGE,POSITION,GRADE,TOTAL_SUBJECT_NO,REMARK)VALUE('$full','$class','$reg','$sess','$term','$sub','1','$fir','$sec','$thi','$tas','$exam','$gts','$gd','$rm','$ots',round('$avr',2),'','$mg','$subno','$mrk')");
     if ($insert) {
     
-    $up = $con->query("UPDATE student_result SET OVERALL_TOTAL_SCORE='$ots',TOTAL_SUBJECT_NO='$subno',OVERALL_AVERAGE=round('$avr',2),OVERALL_REMARK='$mrk',MAIN_GRADE='$mg' WHERE REG_NO ='$reg'");
+    $up = $con->query("UPDATE student_result SET GENERAL_TOTAL_SCORE='$ots',TOTAL_SUBJECT_NO='$subno',AVERAGE=round('$avr',2),REMARK='$mrk',GRADE='$mg' WHERE REG_NO ='$reg' AND SESSION_YEAR='$sess' AND CLASS='$class' AND TERM='$term'");
 
     $pan = pint();
     $lan = let();
     $splan=$pan.$lan;
 
     $ins = $con->query("INSERT INTO pin_table(STUDENT_PIN,DATE,TIME)VALUE('$splan','$date','$time')");
-    
+
+
     header("location:admin_junior_result_system.php?msg='RESULT UPLOADED'");
     
     }else {
