@@ -16,7 +16,7 @@
 
 <div class="main-div-container">
 
-<form name="myform" method="post" action="backend_genreg.php">
+<form name="myform" method="post" action="admin_class_results.php">
 
 <div class="sec-div-container">
 <h1 style="text-align:center;" >FILL IN THE CLASS CREDENTIALS</h1>

@@ -20,21 +20,25 @@ if ($_SERVER['REQUEST_METHOD']="POST") {
     
     
     require("school_database_connection.php");
-
     
-    $sel = $con->query("SELECT GENERAL_TOTAL_SCORE, SUBJECT_NO, SUM(GENERAL_TOTAL_SCORE),SUM(SUBJECT_NO) FROM student_result WHERE REG_NO='$reg'");
+    $sel = $con->query("SELECT SUBJECT_TOTAL_SCORE, SUBJECT_NO, SUM(SUBJECT_TOTAL_SCORE),SUM(SUBJECT_NO) FROM student_result WHERE REG_NO='$reg'");
     if ($sel) {
         $duke = $sel->fetch_assoc();
-        $ots = $duke['SUM(GENERAL_TOTAL_SCORE)']+$gts;
+        $ots = $duke['SUM(SUBJECT_TOTAL_SCORE)']+$gts;
         $subno = $duke['SUM(SUBJECT_NO)']+1;
         $avr = ($ots/$subno);
+        if ($avr == 100) {
+            $avr = 99.99;
+        }else {
+            $avr;
+        }
         $mg = maingrad($avr);
         $mrk = mainren($avr);
 
     }
 
     $insert = $con->query("INSERT INTO student_result
-    (FULLNAME,CLASS,REG_NO,SESSION_YEAR,TERM,SUBJECT,SUBJECT_NO,FIRST_ASS,SEC_ASS,THIRD_ASS,TOTAL_ASSESSMENT_SCORE,EXAM_SCORE,SUBJECT_TOTAL_SCORE,SUBJECT_GRADE,SUBJECT_REMARK,GENERAL_TOTAL_SCORE,AVERAGE,POSITION,GRADE,TOTAL_SUBJECT_NO,REMARK)VALUE('$full','$class','$reg','$sess','$term','$sub','1','$fir','$sec','$thi','$tas','$exam','$gts','$gd','$rm','$ots',round('$avr',2),'','$mg','$subno','$mrk')");
+    (FULLNAME,CLASS,REG_NO,SESSION_YEAR,TERM,SUBJECT,SUBJECT_NO,FIRST_ASS,SEC_ASS,THIRD_ASS,TOTAL_ASSESSMENT_SCORE,EXAM_SCORE,SUBJECT_TOTAL_SCORE,SUBJECT_GRADE,SUBJECT_REMARK,GENERAL_TOTAL_SCORE,AVERAGE,GRADE,TOTAL_SUBJECT_NO,REMARK)VALUE('$full','$class','$reg','$sess','$term','$sub','1','$fir','$sec','$thi','$tas','$exam','$gts','$gd','$rm','$ots',round('$avr',2),'$mg','$subno','$mrk')");
     if ($insert) {
     
     $up = $con->query("UPDATE student_result SET GENERAL_TOTAL_SCORE='$ots',TOTAL_SUBJECT_NO='$subno',AVERAGE=round('$avr',2),REMARK='$mrk',GRADE='$mg' WHERE REG_NO ='$reg' AND SESSION_YEAR='$sess' AND CLASS='$class' AND TERM='$term'");

@@ -11,20 +11,18 @@ if ($sel) {
         $dep = $row['AVERAGE'];
         
         $rowPos[]=$dep;
-        $positionResult;
-        
+        $positionResult=1;
+        $positprik=$positionResult;
     }
-
+        rsort($rowPos);
         $positionNumber=count($rowPos);
         for($positionResult=1;$positionResult <= $positionNumber;$positionResult++){
             $pock=$rowPos[$positionResult-1]  .'|'.  $positionResult;
-            echo "$pock";
+            $prit=$rowPos[$positionResult-1]  .'|'.  $positprik;
+          
+            echo $pock;
             echo "<br>";
         }
-
-
-    
-
 
 }
   
@@ -36,7 +34,7 @@ if ($sel) {
 
 echo "<br>";
 
-$numbers = array(101,201,301,301,401,401,408,500,500,501);
+$numbers = array(101,201,301,301,401,401,408,500,500,1001);
 rsort($numbers);
 
 $arrlength = count($numbers);

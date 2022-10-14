@@ -22,9 +22,9 @@
 
 <?php
 
-$sel = $con->query("SELECT * FROM student_result WHERE REG_NO='$_POST[reg]'  AND   CLASS='$_POST[class]' AND TERM = '$_POST[term]' AND  SESSION_YEAR='$_POST[sess]' GROUP BY REG_NO");
-
+$sel=$con->query("SELECT *, FIND_IN_SET( AVERAGE, (SELECT GROUP_CONCAT(DISTINCT AVERAGE ORDER BY AVERAGE DESC ) FROM student_result )) AS POSITION FROM student_result WHERE REG_NO='$_POST[reg]' AND CLASS='$_POST[class]' AND TERM = '$_POST[term]' AND  SESSION_YEAR='$_POST[sess]' GROUP BY REG_NO ");
 if ($sel) {
+
 while ($dow=$sel->fetch_assoc()) {
 
 ?>

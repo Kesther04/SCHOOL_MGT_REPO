@@ -42,7 +42,6 @@ SUBJECT_GRADE varchar(120)not null,
 SUBJECT_REMARK varchar(120)not null,
 GENERAL_TOTAL_SCORE varchar(120)not null,
 AVERAGE varchar(120)not null,
-POSITION varchar(120)not null,
 GRADE varchar(120)not null,
 TOTAL_SUBJECT_NO varchar(120)not null,
 REMARK varchar(120)not null)ENGINE=innoDB");
