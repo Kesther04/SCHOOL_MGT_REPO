@@ -18,7 +18,7 @@
 
         <?php 
         require("school_database_connection.php");
-        $select = $con->query("SELECT * FROM pin_table");
+        $select = $con->query("SELECT * FROM pin_table WHERE USAGE_AMOUNT = 0 ");
         if ($select) {    
         ?>
         <div style="float:left;">

@@ -25,7 +25,8 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     if ($select) {
         $bot=$select->fetch_assoc();
         $bpin=$bot['STUDENT_PIN'];
-        
+        $usa=$bot['USAGE_AMOUNT'];
+        $paic=$usa+1;
     }
 
     $sel = $con->query("SELECT * FROM result_checks WHERE PIN = '$pin' ");
@@ -115,6 +116,9 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
         //to insert if the above are not true
         $insert = $con->query("INSERT INTO result_checks(STUDENT_NAME,REG_NO,CLASS,SESSION_YEAR,TERM,PIN,DATE,TIME)VALUE('$sname','$reg','$class','$sess','$term','$pin','$date','$time')");
         if ($insert) {    
+        
+        $up = $con->query("UPDATE pin_table SET USAGE_AMOUNT='$paic',USG_DATE='$date',USG_TIME='$time' WHERE STUDENT_PIN='$pin' ");
+
         require("results.php");
         }
     }

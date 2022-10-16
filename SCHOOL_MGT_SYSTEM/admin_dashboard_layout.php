@@ -1,4 +1,10 @@
 
+    <?php
+    session_start();
+    if(!isset($_SESSION['id'])){
+        header('location:school_admin_login.php');
+    }
+    ?>
     <button id="first-insider" onclick="rap()">
     <div></div>
     <div></div>
@@ -23,8 +29,11 @@
         <div class="dash-b"><a href="admin_junior_result_system.php">JUNIOR RESULT UPLOAD</a></div>
         <div class="dash-b"><a href="admin_result_system.php">SENIOR RESULT UPLOAD</a></div>
         <div class="dash-b"><a href="result_form.php">CHECK RESULT</a></div>
-        <div class="dash-b"><a href="backend_pin.php">MANUAL PIN GENERATION</a></button></div>
-        <div class="dash-b"><a href="scratch_card.php">SCRATCH CARD PRINT-OUT</a></button></div>
-        <div class="dash-b"><a href="classform.php">GENERATE RESULT</a></button></div>
+        <div class="dash-b"><a href="backend_pin.php">MANUAL PIN GENERATION</a></div>
+        <div class="dash-b"><a href="scratch_card.php">SCRATCH CARD PRINT-OUT</a></div>
+        <div class="dash-b"><a href="scratch_card_used.php">USED SCRATCH CARD</a></div>
+        <div class="dash-b"><a href="classform.php">GENERATE RESULT</a></div>
+        <div class="dash-b"><button onclick="if(window.confirm('Are you sure want to log out of this page')){window.location='school_admin_login.php';}">LOG OUT</button></div>
+        
     </div>
     </div>

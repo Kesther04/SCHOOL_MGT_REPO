@@ -61,7 +61,7 @@ while ($dow=$sel->fetch_assoc()) {
 
 
 <tr>
-    <td>POSITION</td><td><?php echo $dow['POSITION']; ?></td>
+    <td>POSITION</td><td><?php require('con_pos.php'); ?></td>
     <td>GRADE</td><td><?php echo $dow['GRADE']; ?></td>
 </tr>
 

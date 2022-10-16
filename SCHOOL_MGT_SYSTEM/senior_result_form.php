@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD']="POST") {
     $lan = let();
     $splan=$pan.$lan;
 
-    $ins = $con->query("INSERT INTO pin_table(STUDENT_PIN,DATE,TIME)VALUE('$splan','$date','$time')");
+    $ins = $con->query("INSERT INTO pin_table(STUDENT_PIN,DATE,TIME,USAGE_AMOUNT,USG_DATE,USG_TIME)VALUE('$splan','$date','$time','0','','')");
 
 
     header("location:admin_result_system.php?msg='RESULT UPLOADED'");

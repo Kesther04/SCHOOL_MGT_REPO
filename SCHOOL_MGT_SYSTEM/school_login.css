@@ -1,0 +1,222 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    font-family: arial;
+}
+
+body{
+    margin:0;
+    width:100%;
+}
+
+.login-sec{
+    width:40%;
+    margin:100px;
+    margin-left:450px;
+    height:600px;
+    border-radius:60px;
+    background: linear-gradient(to bottom,rgb(245,245,245,0.6),rgb(0,0,50,0.6));
+    float:left;
+    
+}
+
+.msg-log{
+    width:100%;
+    color:red;
+    text-align: center;
+}
+
+.login-sec h1{
+    text-align: center;
+    padding:20px;
+    margin:10px;
+    color:rgb(0,0,70);
+}
+
+.login-sec h1:hover{
+    color:whitesmoke;
+}
+
+.login-sec table{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.login-sec table tr td{
+    font-size: 20px;
+    margin:20px;
+    padding:20px;
+    color:rgb(0,0,70);
+}
+
+.login-sec table tr td a{
+    color:rgb(0,0,70);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+.login-sec table tr td a:hover{
+    color:whitesmoke;
+    text-decoration: underline;
+}
+
+.login-sec table tr td:hover{
+    color:whitesmoke;
+}
+
+.login-sec table tr td input {
+    padding:15px;
+    border-radius: 15px;
+    width:300px;
+}
+
+.login-sec table tr td input:focus{
+    outline:none;
+}
+
+.btn-div{
+    width:100%;
+    padding:10px;
+    text-align: center;
+}
+
+.btn{
+    padding:20px;
+    width:200px;
+    border-radius:10px;
+    background:rgb(0,0,50);
+    border:2px solid rgb(0,0,50);
+    color:whitesmoke;
+}
+
+.btn:hover{
+    background:rgba(0,0,50,0.6);
+    border:2px solid rgba(0,0,50,0.6);
+}
+
+.form-sec{
+    width:40%;
+    margin-top: 50px;
+    margin-left:450px;
+    height:720px;
+    border-radius:60px;
+    background: linear-gradient(to bottom,rgb(245,245,245,0.6),rgb(0,0,50,0.6));
+}
+
+.form-sec h1{
+    text-align: center;
+    padding:20px;
+    margin:10px;
+    color:rgb(0,0,70);
+}
+
+.form-sec h1:hover{
+    color:whitesmoke;
+}
+
+.form-sec table{
+    margin-top: 50px;
+    margin-left: 20px;
+
+}
+
+.form-sec table tr td{
+    font-size: 20px;
+    margin:20px;
+    padding:20px;
+    color:rgb(0,0,70);
+}
+
+.form-sec table tr td a{
+    color:rgb(0,0,70);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+.form-sec table tr td a:hover{
+    color:whitesmoke;
+    text-decoration: underline;
+}
+
+.form-sec table tr td:hover{
+    color:whitesmoke;
+}
+
+.form-sec table tr td input {
+    padding:15px;
+    border-radius: 15px;
+    width:300px;
+}
+
+.form-sec table tr td input:focus{
+    outline:none;
+}
+
+
+.form-sec table tr td select {
+    padding:15px;
+    border-radius: 15px;
+    width:300px;
+}
+
+.form-sec table tr td select:focus{
+    outline:none;
+}
+
+
+#p-pass{
+    visibility: visible;
+}
+
+#tock{
+    display: block;
+    padding:1px;
+}
+#tock input{
+    width:60%;
+}
+#pock input{
+    width:60%;
+}
+
+#pock{
+    display:none;
+    padding:1px;
+}
+
+.change-pass{
+    font-size: 15px;
+    padding:20px;
+    width:200px;
+    border-radius:10px;
+    background:rgb(0,0,50);
+    border:2px solid rgb(0,0,50);
+    color:whitesmoke;
+}
+
+.change-pass:hover{
+    background:rgba(0,0,50,0.6);
+    border:2px solid rgba(0,0,50,0.6);
+}
+
+
+.p-a-s{
+    display:block;
+    float:left;
+}
+
+#p-a-t{
+    display:none;
+}
+
+#aaa{
+    display: block;
+    width:30%;
+}
+
+#bbb{
+    display:none;
+    width:30%;
+}

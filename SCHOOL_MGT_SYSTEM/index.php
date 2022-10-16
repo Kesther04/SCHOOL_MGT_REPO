@@ -83,7 +83,7 @@
     </div>
     </div>
 
-    <div id="sppp"><a href="check_result.php">School Portal</a></div>
+    <div id="sppp"><a href="check_result.php">Result Portal</a></div>
     
     </div></div>
     </div>

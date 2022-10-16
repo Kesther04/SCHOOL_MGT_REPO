@@ -49,3 +49,25 @@ body{
     width:100%;
     font-size: 14px;
 }
+
+.mic-div-con{
+    float: left;
+    border:1px solid green;
+    width:100%;
+}
+
+.mic-div-con table{
+    width:100%;
+}
+
+.mic-div-con h1{
+    text-align: center;
+}
+
+.mic-div-con table tr:nth-child(even){
+    background:grey;
+}
+
+.mic-div-con table tr:nth-child(odd){
+    background:whitesmoke;
+}

@@ -53,30 +53,15 @@ if ($tab) {
 }
 
 
-$tottab = $con->query("CREATE TABLE if not exists totality
-(ID int(120)not null primary key auto_increment,
-FULLNAME varchar(120)not null,
-CLASS varchar(120)not null,
-REG_NO varchar(120)not null,
-SESSION_YEAR varchar(120)not null,
-TERM varchar(120)not null,
-GENERAL_TOTAL_SCORE varchar(120)not null,
-AVERAGE varchar(120)not null,
-POSITION varchar(120)not null,
-GRADE varchar(120)not null,
-TOTAL_SUBJECT_NO varchar(120)not null,
-REMARK varchar(120)not null)ENGINE=innoDB");
-if ($tottab) {
-    print("<p>tottable created</p>");
-}else {
-    print("<p>tottable not created</p>");
-}
 
 $pt = $con->query("CREATE TABLE if not exists pin_table
 (ID int(80)not null primary key auto_increment,
 STUDENT_PIN varchar(120)not null,
 DATE varchar(120)not null,
-TIME varchar(120)not null)ENGINE=innoDB");
+TIME varchar(120)not null,
+USAGE_AMOUNT varchar(120)not null,
+USG_DATE varchar(120)not null,
+USG_TIME varchar(120)not null)ENGINE=innoDB");
 if ($pt) {
     print("pin table created");
 }else {
@@ -99,10 +84,16 @@ if ($tabl) {
     print("pin result table not created");
 }
 
-
-$postab = $con->query("CREATE TABLE if not exists position
+$ar = $con->query("CREATE TABLE if not exists admin_reg
 (ID int(80)not null primary key auto_increment,
-AVERAGE varchar(120)not null,
-REG_NO varchar(120)not null,
-POSITION varchar(120)not null)ENGINE=innoDB");
-?>
+FULLNAME varchar(120)not null,
+GENDER varchar(120)not null,
+EMAIL_ADDRESS varchar(120)not null,
+PASSWORD varchar(120)not null,
+PHONE_NUMBER varchar(120)not null,
+DATE varchar(120)not null,
+TIME varchar(120)not null)ENGINE=innoDB");
+
+if ($ar) {
+    print("<p>admin reg created</p>");
+}

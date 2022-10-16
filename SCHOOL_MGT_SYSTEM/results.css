@@ -44,6 +44,7 @@ body{
 
 .beat table tr td{
     text-align: left;
+    border:0px solid black;
 }
 
 .prn-but{

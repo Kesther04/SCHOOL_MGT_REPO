@@ -21,6 +21,17 @@
 <div class="man-div-container">
 
 <?php
+$sep = $con->query("SELECT * FROM pin_table WHERE STUDENT_PIN='$pin'");
+if ($sep) {
+    $wac = $sep->fetch_assoc();
+    $pwed=$wac['USAGE_AMOUNT'];
+
+        echo "<p style='float:right;font-weight:bold'>$pwed/5</p>";
+}
+?>
+
+
+<?php
 
 $sel=$con->query("SELECT *, FIND_IN_SET( AVERAGE, (SELECT GROUP_CONCAT(DISTINCT AVERAGE ORDER BY AVERAGE DESC ) FROM student_result )) AS POSITION FROM student_result WHERE REG_NO='$reg' AND CLASS='$class' AND TERM = '$term' AND  SESSION_YEAR='$sess' GROUP BY REG_NO   ");
 
@@ -62,7 +73,7 @@ while ($dow=$sel->fetch_assoc()) {
 
 
 <tr>
-    <td>POSITION</td><td><?php echo $dow['POSITION']; ?></td>
+    <td>POSITION</td><td><?php require('con_pos.php'); ?></td>
     <td>GRADE</td><td><?php echo $dow['GRADE']; ?></td>
 </tr>
 

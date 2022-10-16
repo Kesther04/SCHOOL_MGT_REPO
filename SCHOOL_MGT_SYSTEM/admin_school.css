@@ -36,7 +36,7 @@ body{
     border:0px solid green;
     margin-top:10px;
     margin-bottom: 10px;
-    padding:20px;
+    padding:18px;
     font-size: 18px;
 }
 
@@ -55,6 +55,17 @@ body{
     color:whitesmoke;
 }
 
+.dash-b button{
+    background:none;
+    outline:none;
+    border:0px solid green;
+    font-size: 18px;
+    color:rgb(0,0,70);
+}
+
+.dash-b button:hover{
+    color:whitesmoke;
+}
 
 .main-div-container{
     width:80%;
@@ -191,4 +202,37 @@ body{
 .before-sec-div-container  button:hover{
     background:rgba(0,0,50,0.6);
     border:2px solid rgba(0,0,50,0.6);
+}
+
+
+.mic-div-con{
+    border-radius: 40px;
+    background: linear-gradient(to bottom,rgb(245,245,245,0.6),rgb(0,0,50,0.6));
+    padding:20px;
+    color:rgb(0,0,70);
+    font-weight: bold;
+    margin-top:20px;
+    float: left;
+    width:100%;
+}
+
+.mic-div-con table{
+    width:100%;
+}
+
+.mic-div-con h1{
+    text-align: center;
+}
+
+.mic-div-con table tr:nth-child(even){
+    background:rgb(230,230,230);
+}
+
+.mic-div-con table tr:nth-child(odd){
+    background:whitesmoke;
+}
+
+.mic-div-con table tr td{
+    padding:10px;
+    text-align: center;
 }

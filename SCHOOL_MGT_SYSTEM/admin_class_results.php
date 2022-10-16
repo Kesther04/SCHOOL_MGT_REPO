@@ -56,7 +56,7 @@ if ($sel) {
     <td><?php echo $dow['SESSION_YEAR']; ?></td>
     <td><?php echo $dow['GENERAL_TOTAL_SCORE']; ?></td>
     <td><?php echo $dow['AVERAGE']; ?></td>
-    <td><?php echo $dow['POSITION']; ?></td>
+    <td><?php require('con_pos.php'); ?></td>
     <td><?php echo $dow['GRADE']; ?></td>
 
 </tr>

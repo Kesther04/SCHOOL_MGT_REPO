@@ -12,7 +12,7 @@ $lan = let();
 
 $splan=$pan.$lan;
 
-$ins = $con->query("INSERT INTO pin_table(STUDENT_PIN,DATE,TIME)VALUE('$splan','$date','$time')");
+$ins = $con->query("INSERT INTO pin_table(STUDENT_PIN,DATE,TIME,USAGE_AMOUNT,USG_DATE,USG_TIME)VALUE('$splan','$date','$time','0','','')");
 if ($ins) {
    header("location:admin_school_system.php?msg='PIN GENERATED'");
 }

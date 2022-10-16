@@ -1,0 +1,66 @@
+
+@media (max-width:850px) {
+
+    .login-sec{
+        width:100%;
+        margin:100px;
+        margin-left:0px;
+        height:600px;
+        border-radius:60px;
+        background: linear-gradient(to bottom,rgb(245,245,245,0.6),rgb(0,0,50,0.6));
+        float:left;
+        
+    }
+
+    .login-sec table tr td{
+        font-size: 20px;
+        padding:20px;
+        color:rgb(0,0,70);
+    }
+
+
+    .form-sec{
+        width:100%;
+        margin-top: 50px;
+        margin-left:0px;
+        height:720px;
+        border-radius:60px;
+        background: linear-gradient(to bottom,rgb(245,245,245,0.6),rgb(0,0,50,0.6));
+        float:left;
+    }
+}
+
+
+@media (max-width:375px) {
+
+   
+    
+
+    .login-sec{
+        width:150%;
+        margin:100px;
+        margin-left:0px;
+        height:600px;
+        border-radius:60px;
+        background: linear-gradient(to bottom,rgb(245,245,245,0.6),rgb(0,0,50,0.6));
+        float:left;
+        
+    }
+
+    .login-sec table tr td{
+        font-size: 20px;
+        padding:20px;
+        color:rgb(0,0,70);
+    }
+
+
+    .form-sec{
+        width:150%;
+        margin-top: 50px;
+        margin-left:0px;
+        height:720px;
+        border-radius:60px;
+        background: linear-gradient(to bottom,rgb(245,245,245,0.6),rgb(0,0,50,0.6));
+        float:left;
+    }
+}
