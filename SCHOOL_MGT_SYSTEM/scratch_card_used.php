@@ -17,19 +17,27 @@
 
         <?php 
         require("school_database_connection.php");
-        $select = $con->query("SELECT * FROM pin_table WHERE USAGE_AMOUNT > 0 ");
+        $select = $con->query("SELECT * FROM result_checks GROUP BY PIN ");
         if ($select) {    
         ?>
         <div class="mic-div-con">
             <h1>USED SCRATCH CARDS</h1>
         <table>
-        <?php 
-        while ($row=$select->fetch_assoc()) {
- 
-        ?>
+            <tr>
+                <td>STUDENT_NAME</td>
+                <td>CLASS</td>
+                <td>REG_NO</td>
+                <td>PIN_USED</td>
+                <td>SESSION_YEAR</td>
+            </tr>
+        <?php while ($row=$select->fetch_assoc()) { ?>
         
             <tr>
-                <td><?php echo $row['STUDENT_PIN'];?></td>
+                <td><?php echo $row['STUDENT_NAME'];  ?></td>
+                <td><?php echo $row['CLASS'];  ?></td>
+                <td><?php echo $row['REG_NO'];  ?></td>
+                <td><?php echo $row['PIN'];?></td>
+                <td><?php echo $row['SESSION_YEAR'];  ?></td>
             </tr>
         
         <?php  } ?>
