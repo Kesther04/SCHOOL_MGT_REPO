@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+body{
+    margin:0px;
+    background:url(../pic/1b.png);
+    background-size:cover;
+}
+
+
+.main-div-container{
+    width:80%;
+    margin-left:10%;
+    padding:20px;
+    border:0px solid green;
+}
+
+.sec-div-container{
+    border-radius: 40px;
+    height:720px;
+    background: linear-gradient(to bottom,rgb(245,245,245,0.6),rgb(0,0,50,0.6));
+    padding:20px;
+    color:rgb(0,0,70);
+    font-weight: bold;
+    margin-top:20px;
+}
+
+.sec-div-container h1{
+    color:rgb(0,0,50);
+    text-shadow:0px 2px 0px grey;
+}
+
+.sec-div-container h3{
+    color:rgb(0,0,50);
+    text-shadow:0px 2px 0px grey;
+}
+
+
+.sec-div-container table tr td{
+    padding:30px;
+    margin:10px;
+}
+
+.sec-div-container table tr td input{
+    float:left;
+    width:90%;
+    padding:10px;
+    border-radius: 10px;
+}
+
+.sec-div-container table tr td select{
+    float:left;
+    width:90%;
+    padding:10px;
+    border-radius: 10px;
+}
+
+
+.sec-div-container table tr td input:focus{
+    outline:none;
+}
+
+.sec-div-container table tr td select:focus{
+    outline:none;
+}
+
+
+.sec-div-container span{
+    width:100%;
+    float:left;
+}
+
+.con-btn-div{
+    width:100%;
+    text-align:center;
+}
+
+.con-btn{
+    padding:20px;
+    border-radius:10px;
+    width:20%;
+    background:rgb(0,0,50);
+    border:2px solid rgb(0,0,50);
+    color:whitesmoke;
+}
+
+.con-btn:hover{
+    background:rgba(0,0,50,0.6);
+    border:2px solid rgba(0,0,50,0.6);
+}

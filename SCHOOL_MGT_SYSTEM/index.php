@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home_design.css" media="all">
-    <link rel="stylesheet" href="homethr_design.css" media="all">
-    <link rel="stylesheet" href="homesev_design.css" media="all">
+    <link rel="stylesheet" href="css/home_design.css" media="all">
+    <link rel="stylesheet" href="css/homethr_design.css" media="all">
+    <link rel="stylesheet" href="css/homesev_design.css" media="all">
     <title>BRITISH SCHOOL</title>
 </head>
 <body>
@@ -28,7 +28,7 @@
     <div></div>
     </button>
     
-    <script src="home.js"></script>
+    <script src="js/home.js"></script>
 
     <div id="main-sean">
     <div class="sean">
@@ -83,7 +83,7 @@
     </div>
     </div>
 
-    <div id="sppp"><a href="check_result.php">Result Portal</a></div>
+    <div id="sppp"><a href="student_rchk/check_result.php">Result Portal</a></div>
     
     </div></div>
     </div>
